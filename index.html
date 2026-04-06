@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="counter">
+    <div class="counter-header">
+        <div class="counter-description">
+            <h2>Counter</h2>
+            <p class="counter-header-text">A precise, minimal counter with quick steps.</p>
+        </div>
+        <button data-test-id="btn-reset">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 0V0.941175C11.8927 0.941175 15.0588 4.10729 15.0588 8C15.0588 11.8927 11.8927 15.0588 8 15.0588C4.10729 15.0588 0.941175 11.8927 0.941175 8C0.941175 5.77412 1.99623 3.70071 3.76471 2.36894V5.64706H4.70588V0.941175H0V1.88235H2.85742C1.05882 3.39483 0 5.62259 0 8C0 12.4113 3.58871 16 8 16C12.4113 16 16 12.4113 16 8C16 3.58871 12.4113 0 8 0Z" fill="#EBEBEB"/>
+            </svg>
+            Reset
+        </button>
+    </div>
+    <div class="counter-container">
+        <div class="current-value">
+            <h4>Current value</h4>
+            <p data-test-id="cur-value" class="cur-value">0</p>
+        </div>
+        <div class="buttons-value">
+            <button class="button-value minus" data-test-id="btn-minus-3">-3</button>
+            <button class="button-value minus" data-test-id="btn-minus-2">-2</button>
+            <button class="button-value minus" data-test-id="btn-minus-1">-1</button>
+            <button class="button-value plus" data-test-id="btn-plus-1">+1</button>
+            <button class="button-value plus" data-test-id="btn-plus-2">+2</button>
+            <button class="button-value plus" data-test-id="btn-plus-3">+3</button>
+        </div>
+        <div class="set-value">
+            <p class="p-set">Set value</p>
+            <form class="input-wrapper">
+                <input data-test-id="input-value" id="input-value" type="number" min="-10000000" max="10000000" required>
+                <label for="input-value" class="input-label">Enter an integer...</label>
+                <button data-test-id="btn-apply">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.666656 6H11.3333M5.99999 0.666667V11.3333" stroke="#EBEBEB" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Apply
+                </button>
+            </form>
+            <p>Press Enter to apply. Values outside ±1e9 are clamped</p>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
